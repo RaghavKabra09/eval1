@@ -1,0 +1,22 @@
+def get_unique_char(input_string):
+    unique_uppercase = set()
+    unique_lowercase = set()
+
+    for char in input_string:
+        if char.isupper():
+            unique_uppercase.add(char)
+        elif char.islower():
+            unique_lowercase.add(char)
+
+    sort_uppercase = sorted(unique_uppercase)
+    sort_lowercase = sorted(unique_lowercase)
+
+    print("Unique uppercase characters:", ''.join(sort_uppercase))
+    print("Unique lowercase characters:", ''.join(sort_lowercase))
+
+def main():
+    user_input = input("Enter a string: ")
+    get_unique_char(user_input)
+
+if __name__ == "__main__":
+    main()
